@@ -12,6 +12,10 @@
     "Retrieves the data which is stored under the given UUID from the
      BlobStorage. Returns a java.io.InputStream with the data or nil, if
      a blob with the given UUID was not found.")
+  (exists
+    [this ^java.util.UUID id]
+    "Returns true, if a blob with the given UUID exists in the
+     BlobStorage.")
   (delete
     [this ^java.util.UUID id]
     "Deletes the data which is stored under the given UUID from the

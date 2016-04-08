@@ -22,6 +22,9 @@
       (when (.exists file)
         (io/input-stream
          file))))
+  (exists [this id]
+    (let [file (io/file dir (str id))]
+      (.exists file)))
   (delete [this id]
     (.delete (io/file dir (str id)))))
 
